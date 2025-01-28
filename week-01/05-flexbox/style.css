@@ -1,0 +1,36 @@
+body {
+  background-color: salmon;
+}
+
+.container {
+  background-color: aqua;
+
+  width: 250px;
+  height: 400px;
+
+  /* Step 01: I want this element to have 'Flex' */
+  display: flex;
+  /* Step 02: I don't want a row of elements! I want them in a column */
+  flex-direction: column;
+  /* Step 03: I want to align them on the cross-axis now. Where do I want to shove them? */
+  align-items: center;
+  /* Step 04: Now I want to justify them. To the start? The end? Evenly spaced? */
+  justify-content: space-evenly;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+
+  border: 2px solid black;
+}
+
+.one {
+  background-color: red;
+}
+.two {
+  background-color: yellow;
+}
+.three {
+  background-color: green;
+}
