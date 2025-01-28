@@ -1,0 +1,53 @@
+/* All of these are element selectors */
+
+body {
+  background-color: bisque;
+}
+
+/* A shortcut to comment out code is : ctrl+/ or cmd+/ */
+/* a {
+  color: chocolate;
+} */
+
+header nav a {
+  color: blue;
+}
+
+footer nav {
+  color: blueviolet;
+}
+
+header {
+  /* border: 50px solid black; */
+  border-bottom: 1px solid black;
+}
+
+/* Now lets take a BRIEF look at ID selectors */
+#get-started-button {
+  background-color: aquamarine;
+}
+
+#start-reading-button {
+  background-color: chartreuse;
+}
+
+/* But, we much prefer to use CLASS selectors */
+
+.button {
+  border: 1px dashed black;
+  padding: 5px;
+}
+
+.funky-background {
+  background-color: hotpink;
+}
+
+.funky-text {
+  color: coral;
+}
+
+/* Oh my word, stop. What's a psuedo selector? */
+
+.button:hover {
+  background-color: cornflowerblue;
+}
