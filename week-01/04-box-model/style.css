@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aquamarine;
+}
+
+.box {
+  width: 140px;
+  height: 140px;
+  background-color: brown;
+  margin: 10px;
+  border: 10px solid blue;
+  padding: 10px;
+
+  box-sizing: content-box;
+}
+
+.box-sized {
+  box-sizing: border-box;
+}

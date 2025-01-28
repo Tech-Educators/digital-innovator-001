@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="box">hello! I'm a box who is 180x180</div>
+
+    <p>
+      The box above is larger than the 140x140px we defined in the CSS, because
+      the border and padding add to it.
+    </p>
+
+    <div class="box box-sized my-second-box some-other-class">
+      hi, I'm 140x140
+    </div>
+    <p>
+      This box however, has the 'box-sizing: border-box' rule applied to it.
+    </p>
+    <p>
+      This means the size we give it will INCLUDE the padding and border, when
+      calculated
+    </p>
+  </body>
+</html>
