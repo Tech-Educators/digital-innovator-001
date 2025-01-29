@@ -1,3 +1,5 @@
+/* --- Our boxes --- */
+
 .box {
   width: 200px;
   height: 50px;
@@ -6,7 +8,7 @@
 
 .orange-box {
   width: 200px;
-  height: 50px;
+
   background-color: orange;
 
   z-index: 100;
@@ -29,6 +31,8 @@
   background-color: red;
 }
 
+/* --- Positioning --- */
+
 /* Static is the default 'position'. */
 .static {
   position: static;
@@ -41,14 +45,23 @@
   right:0; */
 
 /* Position 'sticky' sticks the element to browser window as we scroll */
-.sticky {
+.sticky-top {
   position: sticky;
   top: 50px;
-  margin-left: 100px;
+  margin-left: 400px;
 
   z-index: 30;
 }
 
+.sticky-bottom {
+  position: sticky;
+  bottom: 50px;
+  margin-left: 400px;
+
+  z-index: 30;
+}
+
+/* Position 'absolute' lets us move an element relative to its nearest parent */
 .absolute {
   position: absolute;
 
@@ -58,22 +71,30 @@
   z-index: 20;
 }
 
+/* Position relative lets us declare an elements nearest parent as the one to be relateively positioned against */
 .relative {
   position: relative;
 }
 
+/* Position fixed fixes an element to the window of our screen */
 .fixed {
   position: fixed;
 
-  bottom: 0;
+  bottom: 10px;
   right: 0;
+}
+
+/* --- Helpers --- */
+
+img {
+  z-index: 10;
+}
+
+.fit-content {
+  width: fit-content;
 }
 
 .orange {
   background-color: orange;
   color: white;
-}
-
-img {
-  z-index: 10;
 }

@@ -9,6 +9,7 @@
   <img>
     <h1>This is CSS Positioning</h1>
     <!-- Shortcut: p*10>lorem10 -->
+    <h2>This is a static box</h2>
     <div class="box static"></div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, hic.</p>
     <p>
@@ -27,8 +28,8 @@
       Nobis cum dignissimos recusandae molestiae dolor libero aliquid quibusdam
       nihil.
     </p>
-    <h2>This is the location of the sticky box in our HTML document</h2>
-    <div class="box sticky">
+    <h2>This is the location of the (top) sticky box in our HTML document. It scrolls with us when we scroll down past its point in the document, like a nav bar!</h2>
+    <div class="box sticky-top">
         <button>Home</button>
         <button>Login</button>
     </div>
@@ -39,6 +40,7 @@
     <p>Dolorum ad dignissimos et quam?</p>
     <p>Veniam, soluta distinctio rem rerum sed ipsa voluptate aperiam enim.</p>
     <div class="orange-box fixed">
+        <p>This fixed position box is 'stuck' to the viewport window (what we see on our screen) and scrolls with us everywhere</p>
         <button>Back to top</button>
     </div>
     <p>Rem cum, laudantium maxime quo quas iure quos reprehenderit dolorum!</p>
@@ -47,11 +49,15 @@
       voluptate ipsa.
     </p>
 
+    <h2>This 'big box' is a parent element to a brown box (the brown box element is inside of the big box).</h2>
+    <h3>The big box is 'relative'. The brown box is 'absolutely' positioned within it's nearest relative parent - the big box</h3>
     <div class="big-box relative">
       <div class="box absolute"></div>
     </div>
 
-    <div class="relative">
+    <h2>This is a 'real world' example of why you'd use absolute positioning</h2>
+<h3>We've overlaid some text on an image</h3>
+    <div class="relative fit-content">
         <img
         src="https://cdn.shopify.com/s/files/1/0730/3869/2672/files/Preamble_480x480.jpg?v=1716280901"
         alt="a nice bike"
@@ -113,6 +119,11 @@
       architecto, repellendus nulla voluptatem. Odit esse aut nesciunt rem?
     </p>
 
+    <h2>The 'sticky' 'bottom' box</h2>
+    <h3>This 'sticky' box has the 'bottom' property. It scrolls with us, until we reach its point in the document. Then it stays in its home</h3>
+    <div class="box sticky-bottom">
+<p>sticky bottom</p>
+    </div>
 
     <p>
       Quae saepe aspernatur ut, impedit ipsam quidem veniam corporis accusantium
