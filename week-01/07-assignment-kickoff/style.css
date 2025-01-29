@@ -1,0 +1,42 @@
+body {
+  background-color: lightblue;
+
+  border: 2px solid orange;
+
+  /* We need to give the body a height property so that the border appears around the edge of the whole page */
+  height: 97vh;
+
+  display: flex;
+  flex-direction: column;
+
+  /* Here, we want to use justify-content and align-items to arrange our containers properly on the page */
+
+  /* You may want to use gap, but justify-content should sort you out! */
+  gap: 50px;
+}
+
+/* The only reason we started with width and height and background colours, is so that we could see our containers. We can delete those properties later */
+
+.container {
+  /* width: 100px;
+  height: 100px; */
+
+  border: 2px solid black;
+
+  margin: 20px;
+
+  /* I might want to give the containers a width to make them more appropriate */
+  width: 60%;
+}
+
+.business-info {
+  background-color: lightgreen;
+}
+
+.contact-info {
+  background-color: lightseagreen;
+}
+
+.copyright {
+  background-color: lightgray;
+}
