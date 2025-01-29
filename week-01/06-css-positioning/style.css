@@ -1,0 +1,79 @@
+.box {
+  width: 200px;
+  height: 50px;
+  background-color: saddlebrown;
+}
+
+.orange-box {
+  width: 200px;
+  height: 50px;
+  background-color: orange;
+
+  z-index: 100;
+}
+
+.big-box {
+  width: 300px;
+  height: 200px;
+  background-color: blue;
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  border: 2px solid black;
+}
+
+.even-bigger-box {
+  width: 200px;
+  height: 500px;
+  background-color: red;
+}
+
+/* Static is the default 'position'. */
+.static {
+  position: static;
+}
+
+/* Once an element has got a position other than 'static', we have access to these properties: */
+/* top:0;
+  left:0;
+  bottom:0;
+  right:0; */
+
+/* Position 'sticky' sticks the element to browser window as we scroll */
+.sticky {
+  position: sticky;
+  top: 50px;
+  margin-left: 100px;
+
+  z-index: 30;
+}
+
+.absolute {
+  position: absolute;
+
+  top: 10px;
+  right: 20px;
+
+  z-index: 20;
+}
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+
+  bottom: 0;
+  right: 0;
+}
+
+.orange {
+  background-color: orange;
+  color: white;
+}
+
+img {
+  z-index: 10;
+}
