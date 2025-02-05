@@ -1,0 +1,71 @@
+/* Start with a bit of CSS reset */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  border: 2px black solid;
+  height: 500px;
+  width: 100vw;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+
+  position: relative;
+}
+
+.content-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  background-color: white;
+  border: 2px solid black;
+  padding: 10px;
+  /* Get fancy! */
+  /* opacity: 80%; */
+}
+
+.one {
+  background-color: tomato;
+}
+
+.two {
+  background-color: limegreen;
+}
+
+.three {
+  background-color: aquamarine;
+}
+
+/* I want to see the header, and get it flexed correctly */
+header {
+  z-index: 10;
+  border: 2px solid orange;
+
+  display: flex;
+  /* the default flex-direction is row */
+  align-items: center;
+  gap: 10%;
+
+  position: fixed;
+
+  /* 100vw is 100% of the viewport width */
+  width: 100vw;
+}
+
+.surlyone {
+  /* In this method we'll use our actual file */
+  background-image: url("./images/surly1.jpg");
+}
+
+.surlytwo {
+  background-image: url("./images/surly2.jpg");
+}
+
+.surlythree {
+  /* In this method we can use a web link for a url */
+  background-image: url("https://bikepacking.com/wp-content/uploads/2014/01/2014-01-ECR-main.jpg");
+}
