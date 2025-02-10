@@ -1,0 +1,47 @@
+.wrapper {
+  background-color: aquamarine;
+  padding: 10px;
+
+  /* These are the grid definitions */
+  display: grid;
+  /* We have to tell the grid how many template columns and rows it is to have: */
+  /* I can be absolute and definite:
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  /* grid-template-rows: 100px 100px 200px 100px 100px; */
+
+  /* Or, I can use repeat() and tell my CSS to do the maths for me */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 100px) 200px repeat(3, 100px);
+  /* This can use 'fractional units' or fr */
+  /* Or it can repeat with absolute units: 100px */
+}
+
+.item {
+  background-color: tomato;
+  /* Here is where we tell elements within our grid what space they should take up: */
+  grid-column: span 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.nav-bar {
+  background-color: blanchedalmond;
+  display: flex;
+
+  /* Here is also where we tell our elements what space to take up: */
+  /* We can tell an element to 'span' columns or rows */
+  grid-column: span 5;
+
+  /* Or we can use a short hand: start at 1, end at 6 */
+  /* grid-column: 1 / 6; */
+  /* grid-row: 1 / 3; */
+
+  /* Or I can be more specific: */
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.three {
+  grid-column-start: 2;
+  grid-column-end: 6;
+}
