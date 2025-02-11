@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optimisation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>We're using srcset! Woo!</h1>
+
+    <p>We need to open our dev tools inspector</p>
+    <p>Then we need to look at the 'Network' tab</p>
+    <p>
+      This is so that we can see loading metrics, such as file size and time to
+      load, as the images load at different screensizes.
+    </p>
+    <p>Note: some metrics will be variable depending on network requests</p>
+
+    <hr />
+    <h3>Comparing 2000x2000 image of the forest to a 500x500 version:</h3>
+    <img src="./images/forest2000x2000.jpg" alt="" />
+    <img src="./images/forest500x500.webp" alt="" />
+
+    <hr />
+    <h3>
+      This image has just a src, it has no srcset. The resolution is 400x400
+    </h3>
+    <p>
+      We'll also compare how long it takes to load a network image vs a local
+      img:
+    </p>
+    <img src="./images/400x400.jpg" alt="" />
+    <!-- <img src="https://picsum.photos/2000/2000" alt="" /> -->
+
+    <hr />
+    <h3>
+      Here I'm going to use srcset, to tell the browser to load a different
+      image depending on the screen size
+    </h3>
+    <img
+      class="srcset-image"
+      alt="my srcset imagery"
+      srcset="
+        ./images/400x400.jpg          400w,
+        ./images/800x800.jpg          800w,
+        ./images/1000x1000.jpg       1000w,
+        ./images/forest2000x2000.jpg 2000w
+      "
+      sizes="
+      (max-width:500px) 400px,
+      (max-width:900px) 800px,
+      (max-width:1200px) 1000px,
+      2000px"
+      src="./images/forest2000x2000.jpg"
+    />
+
+    <hr />
+  </body>
+</html>
