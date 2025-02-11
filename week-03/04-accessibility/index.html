@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A11y!!</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <h1>Here's some accessible content!</h1>
+
+    <label for="user-input">First Name:</label>
+    <input
+      type="text"
+      id="user-input"
+      placeholder="A place to write text"
+      tabindex="3"
+    />
+
+    <button
+      tabindex="1"
+      aria-label="Click this button to activate pure happiness and joy"
+    >
+      Click Me!
+    </button>
+
+    <!-- Aria labels help us to provide extra context -->
+    <a
+      href="www.google.com"
+      tabindex="4"
+      aria-label="Go to Google to search for more things"
+      >I go to Google</a
+    >
+
+    <label for="textarea-input">Important stuff goes in here</label>
+    <textarea
+      placeholder="Textarea stuff goes in here"
+      id="textarea-input"
+      tabindex="2"
+    ></textarea>
+  </body>
+</html>

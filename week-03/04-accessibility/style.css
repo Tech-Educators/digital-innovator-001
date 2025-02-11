@@ -1,0 +1,31 @@
+button,
+input,
+textarea,
+a {
+  margin: 10px;
+  padding: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+:focus {
+  outline: 5px solid orange;
+}
+
+/* Different pseudo class to :focus! */
+/* :hover {
+  outline: 2px solid purple;
+} */
+
+button:focus {
+  outline: 5px solid tomato;
+}
+
+input:focus {
+  outline: 5px solid green;
+}
