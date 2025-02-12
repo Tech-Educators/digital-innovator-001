@@ -1,0 +1,62 @@
+/* DRY Principle: Don't Repeat Yourself! */
+
+/* Brand Guidelines say that my colours are: */
+/* background: wheat  */
+/* Primary: dark red/crimson */
+/* Secondary: light green */
+/* Accent: yellow */
+
+/* The solution is CSS custom variables */
+/* we write these as: --my-variable-name: my-variable-property */
+/* then the way we reference the customer variable is: var(--my-variable-name) */
+
+/* We can make use of :root, to declare global variables */
+:root {
+  --brand-background: rgb(255, 166, 1);
+  --brand-primary: rgb(128, 12, 35);
+  --brand-secondary: lightgreen;
+  --brand-accent: rgb(193, 12, 248);
+  --brand-article-text: green;
+
+  --standard-padding: 5rem;
+}
+
+body {
+  background-color: var(--brand-background);
+}
+
+.main-title {
+  /* We can also declare locally scoped variables */
+  --border-colour: blue;
+
+  background-color: var(--brand-secondary);
+  color: var(--brand-primary);
+  border: 2px solid var(--border-colour);
+}
+
+.article-container {
+  /* It's worth noting that locally scoped variables are accessible 'down' the tree, to the children */
+  --border-colour: yellow;
+
+  background-color: var(--brand-secondary);
+  padding: 2rem;
+  border: 2px solid var(--border-colour);
+}
+
+.individual-article {
+  background-color: var(--brand-background);
+  padding: var(--standard-padding);
+
+  /* This class is accessing the yellow border colour above, because .individual-article is a child of .article-container */
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--border-colour);
+}
+
+.article-title {
+  color: var(--brand-primary);
+}
+
+.article-text {
+  color: var(--brand-article-text);
+}
