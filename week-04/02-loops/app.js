@@ -52,6 +52,7 @@ console.log("Hello ", classMembers[6]);
 console.log("Hello ", classMembers[7]);
 
 console.log("The length of the array is: ", classMembers.length);
+
 // We can use a 'for loop' instead, with a dynamically changing variable, "i", and use that to achieve our goal instead.
 for (let i = 0; i < classMembers.length; i++) {
   console.log("The value of i is", i);
@@ -76,4 +77,23 @@ const numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 for (const number of numbersArray) {
   console.log("The current number is:", number);
+}
+
+// Practical Example of a loop with some DOM Manipulation
+// I want blog post titles to appear on my web page
+const myBlogpostContainer = document.getElementById("blogpost-container");
+
+const blogPostArray = [
+  "Is the M25 the most exciting road in the world? I THINK SO!",
+  "What will happen when Batman finally fights against Superman?",
+  "Digital Innovators graduate their first course, take the world by storm, and basically give humanity their Utopia",
+  "Frankie gets taken down for writing hyperbolic blog post titles",
+];
+
+for (let i = 0; i < blogPostArray.length; i++) {
+  console.log("This title is", blogPostArray[i]);
+  const newHeading = document.createElement("h2");
+  newHeading.textContent = blogPostArray[i];
+
+  myBlogpostContainer.appendChild(newHeading);
 }
