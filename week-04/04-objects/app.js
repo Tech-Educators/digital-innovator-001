@@ -82,3 +82,29 @@ console.log(products[1].price); // But 'dot notation' is nicer!
 
 products[1].price = 20000; // This is how we would update the value of the A4's price
 console.log(products[1].price);
+
+// We want to display the information from the products array on our webpage
+// We need to make use of DOM Manipulation, combined with loops!
+
+const productsContainer = document.getElementById("productsContainer");
+
+for (let i = 0; i < products.length; i++) {
+  // for each object within my products array, I want to make a new div, with the class of new-car-div.
+  // Inside of that div, I want a heading with the model name
+  // I also want to display the engine size and the price
+  // and append that to my new-car-div
+  // After I have that done, I want to append the new-car-div to my productsContainer
+
+  const newCarDiv = document.createElement("div");
+  newCarDiv.className = "new-car-div";
+  const newModelH2 = document.createElement("h2");
+  //const newEngineSizeP = document.createElement("p");
+  //const newPriceP = document.createElement("p");
+
+  newModelH2.textContent = `The Model Is: ${products[i].model}`;
+  // CHALLENGE: is to get the engine size info and the price information onto the page as well
+
+  // TIP: These lines of code are the last two lines. So write your solutions above!
+  newCarDiv.appendChild(newModelH2);
+  productsContainer.appendChild(newCarDiv);
+}
