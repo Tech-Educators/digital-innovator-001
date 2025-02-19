@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Elements</title>
+  </head>
+  <body>
+    <h1>Image, Audio and Video Elements in HTML. Woop!</h1>
+
+    <h2>Starting with Images</h2>
+    <p>We can use the img tag to display static images</p>
+    <p>
+      It's important that we use a src, alt and perhaps sometimes width and
+      height (although we can also do this in CSS)
+    </p>
+    <p>We can use image sources where the image url is copied from the web</p>
+    <img
+      src="https://static01.nyt.com/images/2023/07/02/multimedia/29ROLLERCOASTER-02-lwgc/29ROLLERCOASTER-02-lwgc-videoSixteenByNineJumbo1600.jpg"
+      alt="An image of a rollercoaster where people are losing their hair"
+      width="300"
+    />
+    <p>
+      However, we want control over our media. So we should locally store and
+      host our images
+    </p>
+
+    <img
+      src="./assets/rollercoaster-tycoon.webp"
+      alt="a nostalgic image of a classic game, rollercoaster tycoon"
+      width="300"
+    />
+
+    <p>We can also use the img tag to display gifs</p>
+    <img
+      src="https://i.giphy.com/SFoBJLKAL7muMZlM12.webp"
+      alt="a rollercoaster tycoon gif"
+      width="300"
+    />
+
+    <h2>Audio</h2>
+    <p>We use the audio tag to bring audio to our page</p>
+    <p>
+      We have to use the 'controls' attribute so that the player becomes visible
+    </p>
+    <audio src="./assets/sound-effect.mp3" controls loop></audio>
+    <p>
+      We can use the 'autoplay' attribute, however, this isn't good user
+      experience, and generally is disabled by default
+    </p>
+
+    <h2>Video</h2>
+    <p>We get videos to appear on our page with the ______ tag</p>
+    <!-- We can't use an img tag for videos, because it doesn't know how to handle it! -->
+    <!-- <img
+      src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      alt=""
+    /> -->
+    <video
+      src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      controls
+      width="400"
+      muted
+      poster="./assets/bbb.png"
+      autoplay
+    ></video>
+    <p>
+      For videos, we should have the 'controls' attribute so that the user can
+      control the video.
+    </p>
+    <p>We can also give it a width, or we can style the size in CSS</p>
+    <p>
+      The 'poster' attribute lets us place a template image onto the video
+      before it plays. Again, better user experience.
+    </p>
+    <p>
+      And we can also use 'autoplay' and 'muted' to further direct our video.
+    </p>
+
+    <h2>BONUS ROUND! iframes!</h2>
+    <p>This is code copied from YouTube allowing us to embed a video</p>
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/KOx0NdGJ7pc?si=GV8_ucmyndQQGLn3"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>
