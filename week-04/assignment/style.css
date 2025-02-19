@@ -1,0 +1,12 @@
+body {
+  background-color: blanchedalmond;
+}
+
+#thumbnail-container img {
+  width: 100px;
+  cursor: pointer;
+}
+
+#background-image img {
+  width: 500px;
+}
