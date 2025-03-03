@@ -8,6 +8,23 @@
   </head>
   <body>
     <h1>Fetching Data!</h1>
+
+    <form id="user-input-form">
+      <label for="museumNumber">Enter a number up to 923042</label>
+      <input
+        type="number"
+        id="museumNumber"
+        name="museumNumber"
+        min="1"
+        max="923042"
+      />
+      <input type="submit" value="Get Museum Image" />
+    </form>
+
+    <div class="museum-container">
+      <img id="museum-image" src="" alt="A museum image from the api" />
+    </div>
+
     <button id="fox-refresher">Refresh The Fox</button>
     <div id="fox-container"></div>
   </body>
