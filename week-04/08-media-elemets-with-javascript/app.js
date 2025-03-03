@@ -27,3 +27,14 @@ pauseButton.addEventListener("click", function () {
   console.log("Pause button clicked");
   electronicMusic.pause();
 });
+
+const currentTimeDisplay = document.getElementById("currentTime");
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60);
+  return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+}
+electronicMusic.addEventListener("timeupdate", function () {
+  currentTimeDisplay.textContent = formatTime(electronicMusic.currentTime);
+});

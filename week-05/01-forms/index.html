@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms Forms Forms</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <h1>Hello Forms!</h1>
+
+    <form class="user-input-form" id="form">
+      <div>
+        <label for="username">Please enter your name:</label>
+        <input
+          type="text"
+          placeholder="Enter your name here..."
+          id="username"
+          name="username"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="email">Please enter your email:</label>
+        <input
+          type="email"
+          placeholder="Enter your email here..."
+          id="email"
+          name="email"
+        />
+      </div>
+
+      <div>
+        <label for="password">Please enter your password:</label>
+        <input
+          type="password"
+          placeholder="Enter your password here..."
+          id="password"
+          name="password"
+        />
+      </div>
+
+      <div>
+        <input type="checkbox" id="showPassword" name="showPassword" />
+        <label for="showPassword">Show Password</label>
+      </div>
+
+      <div>
+        <input type="submit" value="Give me your important info!" />
+        <!-- We can use a button element as well -->
+        <!-- <button>Give me some good stuff</button> -->
+      </div>
+    </form>
+  </body>
+</html>
