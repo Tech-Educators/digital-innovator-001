@@ -1,0 +1,21 @@
+#jokeForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+
+#allJokes {
+  border: 2px solid blue;
+  min-height: 2rem;
+}
+
+#userJoke {
+  min-height: 2.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

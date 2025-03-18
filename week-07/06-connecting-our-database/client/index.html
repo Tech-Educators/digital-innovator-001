@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jokey Database</title>
+    <script type="module" src="/src/main.js" defer></script>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <h1>Jokes and Databases</h1>
+
+    <h2>The jokes from our database:</h2>
+    <div id="allJokes"></div>
+
+    <h2>Write a new joke:</h2>
+    <form id="jokeForm">
+      <label for="jokeTitle">Your joke title:</label>
+      <input
+        type="text"
+        name="jokeTitle"
+        id="jokeTitle"
+        placeholder="Please enter your title!"
+      />
+
+      <label for="jokeQuestion">Your joke question:</label>
+      <textarea
+        name="jokeQuestion"
+        id="jokeQuestion"
+        placeholder="Please enter a very good joke question!"
+        rows="8"
+      ></textarea>
+
+      <label for="jokePunchline">Your joke punchline:</label>
+      <textarea
+        name="jokePunchline"
+        id="jokePunchline"
+        placeholder="Please enter a very good joke punchline!"
+        rows="8"
+      ></textarea>
+
+      <input type="submit" value="Woopah!" />
+    </form>
+  </body>
+</html>
